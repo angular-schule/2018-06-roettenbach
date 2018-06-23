@@ -55,8 +55,6 @@ npm -v
 
 ng version
 > Erwartet: 6.1.0-rc.0
-
-
 ```
 
 (Hinweis: Wir haben die Versionsnummer für die Angular CLI explizit angegeben, damit wir zum Workshop alle die gleiche Umgebung haben. Sollte bis zum Workshop eine neue Version erschienen sein, können wir die Angular-CLI vor Ort aktualisieren.)
