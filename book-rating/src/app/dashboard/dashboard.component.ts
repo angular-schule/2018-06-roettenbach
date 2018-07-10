@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../shared/book';
 
 @Component({
   selector: 'br-dashboard',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  books: string[]; // Array<string>
+  books: Book[];
 
   ngOnInit() {
-    this.books = ['Angular', 'AngularJS 1.x', 'Krieg und Frieden'];
+    this.books = [{
+      isbn: '000',
+      title: 'Angular',
+      description: 'Grundlagen, fortgeschrittene...',
+      rating: 5
+    }, {
+      isbn: '11',
+      title: 'AngularJS',
+      description: 'das alte Framework',
+      rating: 4
+    }];
   }
 }
