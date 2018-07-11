@@ -16,7 +16,9 @@ import { BookComponent } from './book/book.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    // BookRatingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

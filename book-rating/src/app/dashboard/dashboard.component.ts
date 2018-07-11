@@ -10,6 +10,24 @@ export class DashboardComponent implements OnInit {
 
   books: Book[];
 
+  reorderBooks(book: Book) {
+    console.log(2, book);
+
+    // OPTION A
+    this.books = this.books
+      .map(b => b.isbn === book.isbn ? book : b)
+      .sort((a, b) => b.rating - a.rating);
+
+    //#region :-)
+    // OPTION B
+    /*
+    const cleanedList = this.books.filter(b => b.isbn !== book.isbn);
+    this.books = [...cleanedList, book]
+      .sort((a, b) => b.rating - a.rating);
+    */
+   //#endregion
+  }
+
   ngOnInit() {
     this.books = [{
       isbn: '000',
