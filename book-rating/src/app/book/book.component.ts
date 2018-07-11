@@ -9,7 +9,7 @@ import { BookRatingService } from '../shared/book-rating.service';
 })
 export class BookComponent {
 
-  @Input() book: Book = {} as Book; // TODO#
+  @Input() book: Book;
   @Output() rate = new EventEmitter<Book>(true);
 
   constructor(private rs: BookRatingService) {
