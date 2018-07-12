@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Book } from '../shared/book';
 
 @Component({
   selector: 'br-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent implements OnInit {
 
@@ -26,6 +27,10 @@ export class DashboardComponent implements OnInit {
       .sort((a, b) => b.rating - a.rating);
     */
    //#endregion
+  }
+
+  addBook(book: Book) {
+    this.books = [...this.books, book];
   }
 
   ngOnInit() {

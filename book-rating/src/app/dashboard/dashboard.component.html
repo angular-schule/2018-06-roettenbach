@@ -1,4 +1,6 @@
-<br-create-book></br-create-book>
+<br-create-book
+  (createBook)="addBook($event)"
+  ></br-create-book>
 
 <hr>
 
@@ -8,7 +10,6 @@
   (rate)="reorderBooks($event)"
   ></br-book>
 
-<button>Test</button>
 
 <!--
 <ng-container *ngFor="let b of books; index as i; even as e">
