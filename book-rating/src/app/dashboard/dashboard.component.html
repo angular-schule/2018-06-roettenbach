@@ -4,6 +4,21 @@
 
 <hr>
 
+<!--
+<ng-container *ngIf="books$ | async as bb; else loading">
+
+  Buch 1: {{ bb[0].title }}
+  Anzahl der Bücher: {{ bb.length + 1 }}<br>
+
+</ng-container>
+
+<ng-template #loading>
+  <strong>Buch wird geladen...</strong>
+</ng-template>
+
+<hr>
+-->
+
 <br-book
   *ngFor="let b of books"
   [book]="b"
