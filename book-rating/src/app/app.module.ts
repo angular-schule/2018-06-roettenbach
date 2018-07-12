@@ -9,6 +9,8 @@ import { BookComponent } from './book/book.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateBookComponent } from './create-book/create-book.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { CreateBookComponent } from './create-book/create-book.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     // BookRatingService
