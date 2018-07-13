@@ -3,29 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { BookComponent } from './book/book.component';
-
-import { ReactiveFormsModule } from '@angular/forms';
-import { CreateBookComponent } from './create-book/create-book.component';
-
 import { HttpClientModule } from '@angular/common/http';
-import { BookDetailsComponent } from './book-details/book-details.component';
+import { BooksModule } from './books/books.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    BookComponent,
-    CreateBookComponent,
-    BookDetailsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    BooksModule,      // Reihenfolge matters!
+    AppRoutingModule, // Reihenfolge matters!
+    HttpClientModule, // ausnahme MUSS oben bleiben wg. Interceptoren
   ],
   providers: [
     // BookRatingService
