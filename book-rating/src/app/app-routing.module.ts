@@ -7,7 +7,8 @@ const routes: Routes = [
 
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'book/:isbn', component: BookDetailsComponent }
+  { path: 'book/:isbn', component: BookDetailsComponent, // canActivate: [IsAuthenticatedGuard]
+   }
 
 ];
 
