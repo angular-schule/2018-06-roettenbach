@@ -30,7 +30,6 @@ describe('Google', () => {
 
 
   it('should show knowledge panel with description', () => {
-    debugger
     const panel = resultsPage.getKnowledgePanel();
     expect(panel.getText())
       .toContain('Angular is a TypeScript-based open-source front-end web application platform');
